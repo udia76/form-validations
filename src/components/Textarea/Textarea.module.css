@@ -1,0 +1,12 @@
+.textarea {
+  border: 2px solid var(--color-light-gray);
+  background-color: var(--color-lighter-gray);
+  border-radius: var(--border-radius);
+  padding: var(--input-padding);
+  min-height: 120px;
+  outline: none;
+}
+
+.textarea:focus {
+  border: 2px solid var(--color-gray);
+}

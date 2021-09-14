@@ -1,0 +1,16 @@
+.field {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.field label {
+    color: var(--color-gray);
+    margin-bottom: 10px;
+}
+
+.required {
+    color: var(--color-red);
+    font-size: 1.3rem;
+    line-height: 1rem;
+}

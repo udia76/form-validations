@@ -1,0 +1,130 @@
+[
+  {
+    "label": "Function Name",
+    "type": "Text",
+    "default": "",
+    "required": true,
+    "model": "metadata.name",
+    "validations": [
+      {
+        "regex": "^[a-zA-Z0-9-]+$",
+        "message": "Valid characters: a–z, 0–9, –"
+      },
+      {
+        "regex": "^[a-zA-Z0-9].*[a-zA-Z0-9]$",
+        "message": "Must begin and end with: a–z, 0–9"
+      },
+      {
+        "regex": "^(?=.{0,56}$).*$",
+        "message": "Max length: 56"
+      }
+    ]
+  },
+  {
+    "label": "Description",
+    "type": "Textarea",
+    "default": "",
+    "required": false,
+    "model": "spec.description"
+  },
+  {
+    "label": "Runtime",
+    "type": "DropDown",
+    "default": "python:3.9",
+    "required": false,
+    "model": "spec.runtime",
+    "options": [
+      {
+        "label": "Go",
+        "value": "golang"
+      },
+      {
+        "label": "Java",
+        "value": "java"
+      },
+      {
+        "label": "NodeJS",
+        "value": "nodejs"
+      },
+      {
+        "label": "Python 3.7",
+        "value": "python:3.7"
+      },
+      {
+        "label": "Python 3.9",
+        "value": "python:3.9"
+      }
+    ]
+  },
+  {
+    "label": "Categories",
+    "type": "Checkbox",
+    "default": [],
+    "required": false,
+    "model": "metadata.categories",
+    "options": [
+      {
+        "label": "Data Collection",
+        "value": "collect"
+      },
+      {
+        "label": "Data Processing",
+        "value": "process"
+      },
+      {
+        "label": "Analytics & Reporting",
+        "value": "report"
+      },
+      {
+        "label": "Sorting, filtering, tagging",
+        "value": "sort"
+      }
+    ]
+  },
+  {
+    "label": "Service name",
+    "type": "Text",
+    "default": "",
+    "required": true,
+    "model": "spec.serviceName",
+    "validations": [
+      {
+        "regex": "^[a-zA-Z0-9-]+$",
+        "message": "Valid characters: a–z, 0–9, –"
+      },
+      {
+        "regex": "^[a-zA-Z]",
+        "message": "Must begin with: a–z"
+      },
+      {
+        "regex": "[A-Za-z0-9]$",
+        "message": "Must end with: a–z, 0–9"
+      },
+      {
+        "regex": "^(?=.{0,53}$).*$",
+        "message": "Max length: 53"
+      }
+    ]
+  },
+  {
+    "label": "Permissions",
+    "type": "Checkbox",
+    "default": ["read"],
+    "required": true,
+    "model": "spec.permissions",
+    "options": [
+      {
+        "label": "Read files",
+        "value": "read"
+      },
+      {
+        "label": "Write files",
+        "value": "write"
+      },
+      {
+        "label": "Execute files",
+        "value": "execute"
+      }
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+.checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-bottom: 3px;
+}
+
+.checked .box {
+    border: 2px solid var(--color-gray);
+}
+
+.box {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-light-gray);
+    background-color: var(--color-lighter-gray);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    font-size: 0.8rem;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+}

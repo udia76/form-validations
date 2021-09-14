@@ -1,0 +1,54 @@
+.wrapper {
+  position: relative;
+}
+
+.textWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 50%;
+  padding-left: var(--input-padding);
+  border: 2px solid var(--color-light-gray);
+  background-color: var(--color-lighter-gray);
+  border-radius: var(--border-radius);
+}
+
+.focus {
+  border: 2px solid var(--color-gray);
+}
+
+.text {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  width: 100%;
+}
+
+.icon {
+  padding-right: 5px;
+}
+
+.valid {
+  color: var(--color-green);
+}
+
+.invalid {
+  color: var(--color-red);
+}
+
+.validationsWrapper{
+  position: absolute;
+  background-color: var(--color-lighter-gray);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-3);
+  margin: 3px;
+  padding: 4px;
+}
+
+.validationWrapper {
+  display: flex;
+}
+
+
