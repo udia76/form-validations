@@ -4,6 +4,13 @@ export default () => {
     const [isVisible, setVisible] = useState(false);
     const ref = useRef();
     const menuRef = useRef();
+
+    const handleClickOutside = e => {
+        if (!ref.current.contains(e.target) && menuRef.current && !menuRef.current.contains(e.target)) {
+            setVisible(false);
+        }
+    }
+
     useEffect(() => {
         if (document.hasFocus() && ref.current.contains(document.activeElement)) {
             setVisible(true);
@@ -13,10 +20,6 @@ export default () => {
             document.removeEventListener('mousedown', handleClickOutside);
         }
     }, []);
-    const handleClickOutside = e => {
-        if (!ref.current.contains(e.target) && menuRef.current && !menuRef.current.contains(e.target)) {
-            setVisible(false);
-        }
-    }
+
     return {ref, menuRef, isVisible, setVisible};
 };

@@ -14,7 +14,7 @@ export default function DropDown({value, onChange, children, options}) {
     return (
         <div className={cls(style.dropdownWrapper, {[style.focus]: isVisible})} ref={ref}>
             <div className={cls(style.dropdown, {[style.visible]: isVisible})} onClick={() => setVisible(!isVisible)} >
-                {value && options.filter(option => option.value === value)[0].label || 'Select'}
+                {options.filter(option => option.value === value)?.[0]?.label || 'Select'}
                 <ChevronUp/>
             </div>
             {isVisible && <div className={style.dropdownMenu}  ref={menuRef}>

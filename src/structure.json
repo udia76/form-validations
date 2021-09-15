@@ -8,10 +8,10 @@
     "validations": [
       {
         "regex": "^[a-zA-Z0-9-]+$",
-        "message": "Valid characters: a–z, 0–9, –"
+        "message": "Valid characters: a–z, A-Z, 0–9, –"
       },
       {
-        "regex": "^[a-zA-Z0-9].*[a-zA-Z0-9]$",
+        "regex": "^([a-z0-9].*)?[a-z0-9]$",
         "message": "Must begin and end with: a–z, 0–9"
       },
       {
@@ -89,15 +89,15 @@
     "model": "spec.serviceName",
     "validations": [
       {
-        "regex": "^[a-zA-Z0-9-]+$",
+        "regex": "^[a-z0-9-]+$",
         "message": "Valid characters: a–z, 0–9, –"
       },
       {
-        "regex": "^[a-zA-Z]",
+        "regex": "^[a-z]",
         "message": "Must begin with: a–z"
       },
       {
-        "regex": "[A-Za-z0-9]$",
+        "regex": "[a-z0-9]$",
         "message": "Must end with: a–z, 0–9"
       },
       {
